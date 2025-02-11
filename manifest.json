@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "语音输入助手",
+  "version": "1.1",
+  "description": "使用语音输入到光标所在处",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "commands": {
+    "toggle_speech": {
+      "suggested_key": {
+        "default": "Ctrl+A"
+      },
+      "description": "启动或停止语音输入"
+    }
+  }
+}
